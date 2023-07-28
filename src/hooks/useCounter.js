@@ -26,7 +26,7 @@ export const useCounter = ( initialValue = 0 ) =>{
     const onSubmit = (event) => {
         event.preventDefault();
         setCounter( +event.target[0].value);
-        // setCounter('')
+        
     }
 
     return{

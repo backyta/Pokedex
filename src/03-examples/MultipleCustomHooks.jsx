@@ -42,25 +42,30 @@ export const MultipleCustomHooks = () => {
             <div className="container">
 
             <div className="row flex-sm-column flex-md-row align-items-center justify-content-between gap-3">
-                <button disabled={ isLoading } className = "btn btn-primary m-0 col-sm-6 col-md-3" onClick={ () => decrement (1) }>
+
+                <button 
+                    disabled={ isLoading } 
+                    className = "btn btn-primary m-0 col-sm-6 col-md-3 w-50 m-auto"
+                    onClick={ () => decrement (1) }>
                     Previous Pokemon
                 </button>
 
-            <form onSubmit={ onSubmit } className="text-center col-sm-6 col-md-3">
 
+            <form onSubmit={ onSubmit } className="text-center col-sm-6 col-md-3">
                 <input 
-                    type="text" 
+                    type="number" 
                     className=""
-                    placeholder="Escribe un numero"
+                    placeholder="Escribe un numero #pokemon"
                     name="namePokemon"
                     value={ namePokemon }
                     onChange={ onInputChange }    
                     />
-
-            
             </form>
 
-                <button disabled={ isLoading } className = "btn btn-success m-0 col-sm-6 col-md-3" onClick={ () => increment(1) }>
+                <button 
+                    disabled={ isLoading } 
+                    className = "btn btn-success m-0 col-sm-6 col-md-3 w-50 m-auto" 
+                    onClick={ () => increment(1) }>
                     Next Pokemon
                 </button>
             </div>
