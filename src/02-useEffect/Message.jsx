@@ -9,7 +9,7 @@ export const Message = () => {
     //* Crear referencia a la funcion, espacio en momoria donde esta definida, para poder removerla despues.
         const onMouseMove = ({x,y}) =>{
         // const coords = { x, y };
-        // console.log( coords );
+        console.log( {x,y} );
         setCoords({ x,y });
        } 
 
@@ -17,13 +17,13 @@ export const Message = () => {
 
         return () =>{   
             window.removeEventListener('mousemove', onMouseMove) //* si lo remuevo lanza error - en v.18 react
-        }
+        }//* se dispara cuando se destruye
     }, []);
 
 
     return ( 
         <>
-            <h3>Uusario ya existe</h3>
+            <h3>Usario ya existe</h3>
             {JSON.stringify(coords)}
         </>
      );

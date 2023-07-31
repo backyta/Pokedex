@@ -6,16 +6,14 @@ export const useCounter = ( initialValue = 0 ) =>{
 
     const [ counter, setCounter ] = useState( initialValue );
 
-    const [inputValue, setInputValue] = useState('');
-
     const increment = ( value = 1 ) =>{
-        setCounter( counter + parseInt(value));
+        setCounter( (current) => current + value);
         // console.log(counter);
     }
 
     const decrement = ( value = 1) =>{
         if (counter === 0) return;
-        setCounter( counter - value);
+        setCounter( (current) => current - value);
         // console.log(counter);
     }
 
@@ -34,7 +32,7 @@ export const useCounter = ( initialValue = 0 ) =>{
         increment: increment,
         decrement,
         reset,
-        onSubmit
+        onSubmit,
     }
 }
 

@@ -1,9 +1,10 @@
 /* eslint-disable no-empty-pattern */
 import { useCounter,useFetch, useForm } from "../hooks";
-import { ErrorMessage, LoadingQuotes, Quotes } from "./";
+import { ErrorMessage, LoadingQuotes, Quotes } from "../03-examples";
 
 
-export const MultipleCustomHooks = () => {
+
+export const Layout = () => {
 
     const { counter, increment, decrement, onSubmit } = useCounter(1);
    
@@ -16,6 +17,7 @@ export const MultipleCustomHooks = () => {
         namePokemon:''
     });
 
+ 
     
     return ( 
         <>
@@ -72,6 +74,8 @@ export const MultipleCustomHooks = () => {
      );
 }
  
-//* El doble !! transforma el undefined en treu y luego en false, luego compara si la data es verdadera
-//* && se ejecutara la data[0]
+//? UseLayoutEffect 
+
+//*
+
      
